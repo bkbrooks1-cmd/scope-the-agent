@@ -1,0 +1,8 @@
+# Not part of the repo or the zip
+_build-log/
+scope-the-agent-output/
+*.zip
+*.skill
+__pycache__/
+.DS_Store
+Thumbs.db

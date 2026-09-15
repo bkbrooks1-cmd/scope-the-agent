@@ -1,0 +1,167 @@
+{
+  "process": "Wholesale order fulfillment",
+  "date": "2026-09-15",
+  "skill_version": "1.0.0",
+  "owner": "Owner",
+  "cost_today": "About 6 hours a week across two people; one late order a month",
+  "if_nothing_changes": "Holiday weeks keep slipping and the two largest accounts keep asking for a status call",
+  "trigger": "Order email arrives from a wholesale customer (follow-up found: the customer's Friday forecast call sets the quantities two days earlier)",
+  "end_state": "Order released to delivery and invoice sent",
+  "steps": [
+    {
+      "n": 1,
+      "name": "Log the order",
+      "actor": "Order desk",
+      "decision": false,
+      "rule": null,
+      "rule_stated": null,
+      "exceptions": [
+        {
+          "what": "Order arrives by phone instead of email",
+          "frequency": "once a week"
+        }
+      ],
+      "cost_of_wrong": "n/a",
+      "wrong_acceptable": "n/a",
+      "wrong_looks_like": "Order missing from the sheet on bake day"
+    },
+    {
+      "n": 2,
+      "name": "Check stock against the order",
+      "actor": "Order desk",
+      "decision": true,
+      "rule": "If every item is in stock at the ordered quantity, confirm; otherwise escalate to the owner",
+      "rule_stated": true,
+      "exceptions": [
+        {
+          "what": "Stock count is stale because yesterday's bake was not entered",
+          "frequency": "one in ten"
+        }
+      ],
+      "cost_of_wrong": "A confirmed order we cannot fill; the customer finds out on delivery day",
+      "wrong_acceptable": "acceptable",
+      "wrong_looks_like": "Confirmation sent for an item with zero on hand"
+    },
+    {
+      "n": 3,
+      "name": "Confirm date to the customer",
+      "actor": "Order desk",
+      "decision": false,
+      "rule": null,
+      "rule_stated": null,
+      "exceptions": [],
+      "cost_of_wrong": "n/a",
+      "wrong_acceptable": "n/a",
+      "wrong_looks_like": "Customer replies asking whether we got the order"
+    },
+    {
+      "n": 4,
+      "name": "Schedule the bake and decide batch order",
+      "actor": "Baker",
+      "decision": true,
+      "rule": null,
+      "rule_stated": false,
+      "exceptions": [
+        {
+          "what": "Oven down for maintenance",
+          "frequency": "twice a year"
+        }
+      ],
+      "cost_of_wrong": "A late order; twice it has cost an account",
+      "wrong_acceptable": "not acceptable",
+      "wrong_looks_like": "Two orders finish after their delivery slot"
+    },
+    {
+      "n": 5,
+      "name": "Bake and pack",
+      "actor": "Baker",
+      "decision": false,
+      "rule": null,
+      "rule_stated": null,
+      "exceptions": [
+        {
+          "what": "Short on an ingredient mid-bake",
+          "frequency": "once a month"
+        }
+      ],
+      "cost_of_wrong": "Wasted batch, about $80",
+      "wrong_acceptable": "n/a",
+      "wrong_looks_like": "Pack count does not match the order sheet"
+    },
+    {
+      "n": 6,
+      "name": "Approve invoice and release",
+      "actor": "Owner",
+      "decision": true,
+      "rule": "If pack count matches the confirmation and the price matches the customer's rate sheet, release",
+      "rule_stated": true,
+      "exceptions": [
+        {
+          "what": "Customer has an unpaid balance over 60 days",
+          "frequency": "one in twenty"
+        }
+      ],
+      "cost_of_wrong": "Unacceptable: an invoice we cannot collect, or shipping to an account on hold",
+      "wrong_acceptable": "not acceptable",
+      "wrong_looks_like": "Invoice total differs from the rate sheet"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Packed order",
+      "customer": "Wholesale customer",
+      "requirements": [
+        {
+          "text": "Delivered by 7am on the agreed date",
+          "status": "current"
+        },
+        {
+          "text": "Item count matches the confirmation email",
+          "status": "proposed"
+        }
+      ]
+    },
+    {
+      "name": "Invoice",
+      "customer": "Customer's accounts payable",
+      "requirements": [
+        {
+          "text": "Prices match the customer's rate sheet; sent the same day as delivery",
+          "status": "current"
+        }
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "Order email",
+      "supplier": "Wholesale customer",
+      "requirements": [
+        {
+          "text": "Names each product, quantity, and delivery date",
+          "status": "current"
+        }
+      ]
+    },
+    {
+      "name": "Stock count",
+      "supplier": "Baker (entered end of each day)",
+      "requirements": [
+        {
+          "text": "Entered before 6pm the day before the order is checked",
+          "status": "proposed"
+        }
+      ]
+    },
+    {
+      "name": "Customer rate sheet",
+      "supplier": "Owner",
+      "requirements": [
+        {
+          "text": "One rate sheet per customer, dated within the last 12 months",
+          "status": "current"
+        }
+      ]
+    }
+  ]
+}
