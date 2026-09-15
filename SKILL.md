@@ -122,4 +122,4 @@ Outside that condition, say the not-available line from that file, which names t
 
 ## Attribution
 
-The nine-question sequence is adapted from onesixsigma.com. The process, inputs, outputs, customers framing follows Rummler and Brache. The decision inventory, the classification rules, and the build-prompt shape are the author's. Released under CC BY 4.0 by Brian Brooksby, Brooksby Consulting, with List of Demands issue #6.
+The nine-question sequence is adapted from onesixsigma.com. The process, inputs, outputs, customers framing follows Rummler and Brache. The decision inventory, the classification rules, and the build-prompt shape are the author's. Released under CC BY 4.0 by Brian Brooksby, Brooksby Consulting, with Chaos to Clarity issue #6.

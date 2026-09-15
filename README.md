@@ -1,6 +1,6 @@
 # scope-the-agent
 
-A Claude skill that interviews you about one business process, tells you which steps deserve an agent, and writes the prompt that builds it. It ships free with issue #6 of *List of Demands*, "Scope the agent before you build it." Install takes five minutes. The interview takes about an hour, and the skill times it.
+A Claude skill that interviews you about one business process, tells you which steps deserve an agent, and writes the prompt that builds it. It ships free with issue #6 of *Chaos to Clarity*, "Scope the agent before you build it." Install takes five minutes. The interview takes about an hour, and the skill times it.
 
 An agent inherits every decision you did not write down. This skill writes them down first.
 
@@ -62,7 +62,7 @@ The nine-question sequence is adapted from onesixsigma.com. The framing of a pro
 
 ## Subscribe
 
-This skill is free with a free subscription to *List of Demands*, a weekly issue on what breaks when a company outgrows its processes and what to do about it before buying a tool or building an agent. Subscribe here: https://brianbrooksby.substack.com/
+This skill is free with a free subscription to *Chaos to Clarity*, a weekly issue on what breaks when a company outgrows its processes and what to do about it before buying a tool or building an agent. Subscribe here: https://brianbrooksby.substack.com/
 
 If you run the skill on a real process, reply to the issue with your elapsed minutes. Nobody has published a number for how long the first SIPOC takes, and I would like to.
 
@@ -72,4 +72,4 @@ CC BY 4.0. Use it, change it, ship it, credit it. See `LICENSE`.
 
 ---
 
-Built by Brian Brooksby, Brooksby Consulting, for *List of Demands* issue #6.
+Built by Brian Brooksby, Brooksby Consulting, for *Chaos to Clarity* issue #6.

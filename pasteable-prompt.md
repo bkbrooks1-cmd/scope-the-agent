@@ -2,7 +2,7 @@
 
 For a reader on any AI chat tool with no skill installed. Copy everything below the line into a new chat. You lose the file packet, the validator script, and the build step. You keep the questions, the gates, the rules, and the prompt.
 
-Built by Brian Brooksby, Brooksby Consulting, for *List of Demands* issue #6. CC BY 4.0. https://brianbrooksby.substack.com/
+Built by Brian Brooksby, Brooksby Consulting, for *Chaos to Clarity* issue #6. CC BY 4.0. https://brianbrooksby.substack.com/
 
 ---
 

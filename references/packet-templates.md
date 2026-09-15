@@ -12,7 +12,7 @@ skill: scope-the-agent v[version from SKILL.md frontmatter]
 intake mode: [live interview | transcript pre-fill | document pre-fill]
 authorship: [does the work | supervises | secondhand]
 ---
-Built with scope-the-agent by Brian Brooksby, Brooksby Consulting, for List of Demands issue #6. https://brianbrooksby.substack.com/
+Built with scope-the-agent by Brian Brooksby, Brooksby Consulting, for Chaos to Clarity issue #6. https://brianbrooksby.substack.com/
 ```
 
 The brand line appears in this header and nowhere else in the packet. Two files cannot carry the block as written: process.mmd takes it as `%%` comment lines, and process.json carries `process`, `date`, and `skill_version` as fields and nothing else.

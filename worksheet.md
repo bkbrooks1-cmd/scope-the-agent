@@ -56,4 +56,4 @@ Start time: ________  End time: ________  Elapsed: ________ min
 
 Agent steps: ____  Script steps: ____  Human steps: ____   No agent steps? Build a script or a checklist.
 
-Nine questions adapted from onesixsigma.com. Inputs, process, outputs, customers framing after Rummler and Brache. Brian Brooksby, Brooksby Consulting, for *List of Demands* issue #6. CC BY 4.0. https://brianbrooksby.substack.com/
+Nine questions adapted from onesixsigma.com. Inputs, process, outputs, customers framing after Rummler and Brache. Brian Brooksby, Brooksby Consulting, for *Chaos to Clarity* issue #6. CC BY 4.0. https://brianbrooksby.substack.com/
